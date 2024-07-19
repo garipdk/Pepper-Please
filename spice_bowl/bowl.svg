@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30.001366mm"
+   height="9.9999495mm"
+   viewBox="0 0 30.001366 9.9999497"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="bowl.png"
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="bowl.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.5144352"
+     inkscape:cx="67.371314"
+     inkscape:cy="9.3016557"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect416"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Utilise la règle de remplissage « fill-rule: evenodd » de la boîte de dialogue &lt;b&gt;Fond et contour&lt;/b&gt; en l'absence de résultat de mise à plat après une conversion en chemin." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath412">
+      <rect
+         style="display:block;fill:#010101;stroke:#000000;stroke-width:1.665"
+         id="rect414"
+         width="181.08975"
+         height="84.538208"
+         x="13.793077"
+         y="39.154537" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.102549,-86.015855)">
+    <path
+       style="fill:#010101;stroke:#000000;stroke-width:0.163578"
+       d="M 74.892636,95.915329 C 69.064786,95.543116 64.176352,92.915995 62.124941,89.053769 61.641815,88.14418 61.362258,87.274232 61.213522,86.217538 l -0.01687,-0.119894 h 14.907533 14.907533 l -0.02197,0.182996 c -0.01207,0.100648 -0.05821,0.360597 -0.102494,0.577664 -0.603528,2.958332 -2.973375,5.625844 -6.476315,7.289773 -1.965337,0.933553 -4.089611,1.497625 -6.479637,1.720579 -0.624536,0.05826 -2.424378,0.0859 -3.038649,0.04667 z"
+       id="path489" />
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgdsf6n7ydbmv"]
+
+[ext_resource type="Script" path="res://spice_bowl/bowl.gd" id="1_ng5st"]
+[ext_resource type="Texture2D" uid="uid://drotckbctguqf" path="res://spice_bowl/bowl.png" id="1_ryh7y"]
+
+[node name="SpiceBowl" type="Node2D"]
+script = ExtResource("1_ng5st")
+
+[node name="Line2D" type="Line2D" parent="."]
+unique_name_in_owner = true
+points = PackedVector2Array(-230, 0, 0, 0, 230, 0)
+closed = true
+width = 5.0
+default_color = Color(0.748734, 0.593702, 0.595945, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 15)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ryh7y")
