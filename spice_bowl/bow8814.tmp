@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgdsf6n7ydbmv"]
 
 [ext_resource type="Script" path="res://spice_bowl/bowl.gd" id="1_ng5st"]
+[ext_resource type="Texture2D" uid="uid://drotckbctguqf" path="res://spice_bowl/bowl.png" id="1_ryh7y"]
 [ext_resource type="Texture2D" uid="uid://rdr7dyxeawaf" path="res://spice_bowl/texture.png" id="2_ejulm"]
-[ext_resource type="Texture2D" uid="uid://8ekw7iqjkyxe" path="res://sprites/SpiceBowl.png" id="3_xye8n"]
 
 [node name="SpiceBowl" type="Node2D"]
 script = ExtResource("1_ng5st")
@@ -16,6 +16,6 @@ default_color = Color(0, 0, 0, 1)
 texture = ExtResource("2_ejulm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -59)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("3_xye8n")
+position = Vector2(0, 15)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ryh7y")

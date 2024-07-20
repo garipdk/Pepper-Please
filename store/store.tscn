@@ -1,32 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=6 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
-[ext_resource type="PackedScene" uid="uid://dgdsf6n7ydbmv" path="res://spice_bowl/bowl.tscn" id="2_xkoka"]
+[ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_1ys6d"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hs7qi"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_dt45t"]
+events = [SubResource("InputEventKey_i54fl")]
 
 [node name="Store" type="Node2D" groups=["store_group"]]
 script = ExtResource("1_mxsxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(219.75, 142.75)
-scale = Vector2(440.5, 286.5)
+position = Vector2(573.25, 321.25)
+scale = Vector2(1147.5, 643.5)
 texture = SubResource("CanvasTexture_hs7qi")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "0"
+[node name="Accept" type="Button" parent="." groups=["store_group"]]
+offset_left = 678.0
+offset_top = 231.0
+offset_right = 802.0
+offset_bottom = 262.0
+shortcut = SubResource("Shortcut_dt45t")
+text = "Sold!"
+metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="." groups=["store_group"]]
-offset_left = 24.0
-offset_top = 40.0
-offset_right = 75.0
-offset_bottom = 71.0
-text = "Sell"
+[node name="Bargain" type="Button" parent="."]
+offset_left = 677.0
+offset_top = 274.0
+offset_right = 803.0
+offset_bottom = 305.0
+text = "Bargain..."
 
-[node name="SpiceBowl" parent="." instance=ExtResource("2_xkoka")]
-position = Vector2(260, 148)
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 78.0
+offset_top = 43.0
+offset_right = 801.0
+offset_bottom = 208.0
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Dialog" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+bbcode_enabled = true
+fit_content = true
+
+[node name="Shelves" parent="." instance=ExtResource("2_1ys6d")]
+position = Vector2(990, 350)
+
+[connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]

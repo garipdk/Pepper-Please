@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://rngm0luugq5a"]
+
+[ext_resource type="Script" path="res://shelves/shelves.gd" id="1_bhmsi"]
+[ext_resource type="Texture2D" uid="uid://dgdkf74fnnf18" path="res://sprites/SpiceHolder.png" id="1_rwtf6"]
+[ext_resource type="PackedScene" uid="uid://dgdsf6n7ydbmv" path="res://spice_bowl/bowl.tscn" id="2_p6nlr"]
+
+[node name="Shelves" type="Node2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_bhmsi")
+
+[node name="SpiceHolder" type="Sprite2D" parent="."]
+position = Vector2(-4.5, -30)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("1_rwtf6")
+
+[node name="Salt" parent="." instance=ExtResource("2_p6nlr")]
+unique_name_in_owner = true
+position = Vector2(53.5001, -169)
+min_value = 5.0
+max_value = 10.0
+color = Color(0.592157, 0.72549, 1, 1)
+
+[node name="Laurel" parent="." instance=ExtResource("2_p6nlr")]
+unique_name_in_owner = true
+position = Vector2(-63.4999, 29)
+min_value = 10.0
+max_value = 20.0
+spice_name = "laurel"
+color = Color(0.182212, 0.371567, 0.381882, 1)
+
+[node name="Cinnamon" parent="." instance=ExtResource("2_p6nlr")]
+unique_name_in_owner = true
+position = Vector2(53.5001, 28)
+min_value = 20.0
+max_value = 50.0
+spice_name = "cinnamon"
+color = Color(0.54, 0.37503, 0.2862, 1)
+
+[node name="Fenugreek" parent="." instance=ExtResource("2_p6nlr")]
+unique_name_in_owner = true
+position = Vector2(-62.4999, 226)
+min_value = 50.0
+max_value = 100.0
+spice_name = "saffron"
+color = Color(0.73, 0.0219, 0.128115, 1)
+
+[node name="Saffron" parent="." instance=ExtResource("2_p6nlr")]
+unique_name_in_owner = true
+position = Vector2(53.5001, 226)
+min_value = 100.0
+max_value = 1000.0
+spice_name = "fenugreek"
+color = Color(0.8, 0.673867, 0.112, 1)
+
+[node name="GoldCounter" type="Label" parent="."]
+offset_left = -81.4999
+offset_top = -253.0
+offset_right = -35.4999
+offset_bottom = -230.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+metadata/_edit_use_anchors_ = true
