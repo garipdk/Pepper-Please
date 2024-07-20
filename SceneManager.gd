@@ -1,14 +1,10 @@
 extends Node2D
 
+var current_destination_map:NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().process_frame
-	PepperGlobal.shelves = $Shelves
-	add_child(load("res://map/map.tscn").instantiate())
-	add_child(load("res://store/store.tscn").instantiate())
-	await get_tree().process_frame
-	move_child($Shelves, 2)
 	$Shelves.connect_all_transations($Store)
 	pass # Replace with function body.
 
@@ -18,5 +14,22 @@ func _input(event:InputEvent):
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
+	if PepperGlobal.canChangeScene:
+		print(current_destination_map.get_name(0))
+		if current_destination_map.get_name(0) == "Store":
+			move_child(get_node(current_destination_map), 1)
+		PepperGlobal.canChangeScene = false
+		
 	pass
+
+
+func _on_shelves_ready():
+	PepperGlobal.shelves = $Shelves
+	pass # Replace with function body.
+
+
+
+func _on_area_2d_body_entered(_body, extra_arg_0):
+	current_destination_map = extra_arg_0
+	pass # Replace with function body.

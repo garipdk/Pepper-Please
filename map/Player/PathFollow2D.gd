@@ -12,5 +12,9 @@ func _process(delta):
 		progress_ratio += delta
 	elif progress_ratio >= 1.:
 		is_moving = false
-	
+		var pos = $MapPlayer.global_position
+		progress_ratio = 0.
+		$MapPlayer.global_position = pos 
+		if not PepperGlobal.canChangeScene:
+			PepperGlobal.canChangeScene = true
 	pass

@@ -15,25 +15,25 @@ script = ExtResource("1_0w3gs")
 
 [node name="Sea" type="Sprite2D" parent="."]
 position = Vector2(-121, -83)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("2_b030n")
 centered = false
 
 [node name="Island" type="Sprite2D" parent="."]
 position = Vector2(50, 17)
 rotation = 0.00311007
-scale = Vector2(0.9, 0.9)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("3_t5n70")
 centered = false
 
 [node name="Port" parent="." instance=ExtResource("5_6hm8e")]
-position = Vector2(483, 247)
+position = Vector2(789, 470)
 
 [node name="PepperPlace" parent="." instance=ExtResource("5_6hm8e")]
-position = Vector2(345, 54)
+position = Vector2(523, 138)
 
-[node name="SpaceShip" parent="." instance=ExtResource("5_6hm8e")]
-position = Vector2(172, 283)
+[node name="Store" parent="." instance=ExtResource("5_6hm8e")]
+position = Vector2(141, 515)
 place_image_path = ExtResource("5_ts8m5")
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -45,13 +45,13 @@ loop = false
 script = ExtResource("6_q2ttw")
 
 [node name="MapPlayer" parent="Path2D/PathFollow2D" instance=ExtResource("1_lo1dr")]
-position = Vector2(261, 290)
-scale = Vector2(0.4, 0.4)
+position = Vector2(336, 495)
+scale = Vector2(0.6, 0.6)
 
 [connection signal="gui_input" from="Port/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Port")]]
 [connection signal="gui_input" from="PepperPlace/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("PepperPlace")]]
-[connection signal="gui_input" from="SpaceShip/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("SpaceShip")]]
+[connection signal="gui_input" from="Store/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Store")]]
 
 [editable path="Port"]
 [editable path="PepperPlace"]
-[editable path="SpaceShip"]
+[editable path="Store"]

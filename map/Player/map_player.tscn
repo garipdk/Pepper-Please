@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ftaxkqoanpy0"]
+[gd_scene load_steps=7 format=3 uid="uid://ftaxkqoanpy0"]
 
 [ext_resource type="Texture2D" uid="uid://d313pefxuqtu5" path="res://map/Player/perso.png" id="1_5gd24"]
 [ext_resource type="Texture2D" uid="uid://bn83vaeb7p8hv" path="res://map/Player/perso_clockwise.png" id="2_wimc4"]
@@ -25,7 +25,15 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_kq7bn"]
+radius = 150.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h8yjq")
 frame_progress = 0.154273
 script = ExtResource("4_rxgy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kq7bn")

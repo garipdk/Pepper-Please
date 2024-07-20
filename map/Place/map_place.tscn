@@ -7,26 +7,27 @@
 [ext_resource type="Script" path="res://map/Place/PlaceCollisionShape2D.gd" id="5_inj3o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_750fk"]
-radius = 30.0
-height = 95.0
+radius = 47.0
+height = 136.0
 
 [node name="MapPlace" type="Node2D"]
 script = ExtResource("1_i0ffl")
 
 [node name="MapPlaceMouseControl" type="Container" parent="."]
-offset_right = 75.0
-offset_bottom = 97.0
+offset_right = 120.0
+offset_bottom = 130.0
 script = ExtResource("2_wnguw")
 
 [node name="PlaceSprite2D" type="Sprite2D" parent="MapPlaceMouseControl"]
 position = Vector2(0, 30)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hmv3h")
 centered = false
 
 [node name="Arrow" type="Sprite2D" parent="MapPlaceMouseControl"]
 visible = false
-position = Vector2(25, 0)
+position = Vector2(47, 1)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_hksbq")
 centered = false
 
@@ -34,7 +35,7 @@ centered = false
 position = Vector2(0, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapPlaceMouseControl/Area2D"]
-position = Vector2(37, 41)
+position = Vector2(62, 61)
 shape = SubResource("CapsuleShape2D_750fk")
 script = ExtResource("5_inj3o")
 
