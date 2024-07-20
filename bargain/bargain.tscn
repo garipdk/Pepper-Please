@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://bargain/bargain.gd" id="1_i3kqv"]
 [ext_resource type="Texture2D" uid="uid://d2ovf8v32ahwc" path="res://bargain/bargain_bar.png" id="2_rgey0"]
-[ext_resource type="Texture2D" uid="uid://cfvccc5tq2dfs" path="res://map/Place/arrow.png" id="3_d7wln"]
+[ext_resource type="Texture2D" uid="uid://dslt0uemspndv" path="res://bargain/bargain_pepper.png" id="3_5unfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx6ad"]
 size = Vector2(393.116, 52.0217)
@@ -21,13 +21,8 @@ modulate = Color(0.05325, 0.06, 0.015, 1)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kx6ad")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
-position = Vector2(0, -3)
-polygon = PackedVector2Array(-1, -5, 0, 0, 1, -5)
-
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(-1.90735e-06, -5)
-scale = Vector2(0.108696, 0.15625)
-texture = ExtResource("3_d7wln")
+position = Vector2(-2.27374e-13, -6)
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_5unfq")
