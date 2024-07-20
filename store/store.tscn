@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=7 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
+[ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_1ys6d"]
+[ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hs7qi"]
 
@@ -45,5 +47,12 @@ layout_mode = 2
 size_flags_vertical = 0
 bbcode_enabled = true
 fit_content = true
+
+[node name="Shelves" parent="." instance=ExtResource("2_1ys6d")]
+position = Vector2(990, 350)
+
+[node name="BargainMinigame" parent="." instance=ExtResource("3_ow2md")]
+position = Vector2(444, 290)
+scale = Vector2(5, 5)
 
 [connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
