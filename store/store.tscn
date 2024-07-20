@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=8 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
-[ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_1ys6d"]
+[ext_resource type="Texture2D" uid="uid://c64wb6qvvk63x" path="res://dark_rectange.png" id="2_t3if4"]
+[ext_resource type="Texture2D" uid="uid://bhc4fh0rhcbhq" path="res://sprites/MaketPlace.png" id="3_m2fvj"]
 [ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_hs7qi"]
+[ext_resource type="Texture2D" uid="uid://nto70t2lb6ui" path="res://sprites/Counter.png" id="5_j3wj6"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
 keycode = 4194309
@@ -15,32 +15,41 @@ events = [SubResource("InputEventKey_i54fl")]
 [node name="Store" type="Node2D" groups=["store_group"]]
 script = ExtResource("1_mxsxu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(573.25, 321.25)
-scale = Vector2(1147.5, 643.5)
-texture = SubResource("CanvasTexture_hs7qi")
+[node name="DarkRectange" type="Sprite2D" parent="."]
+position = Vector2(962.08, 545.75)
+scale = Vector2(1.92984, 1.92984)
+texture = ExtResource("2_t3if4")
+
+[node name="MaketPlace" type="Sprite2D" parent="."]
+position = Vector2(750, 454)
+texture = ExtResource("3_m2fvj")
+
+[node name="BargainMinigame" parent="." instance=ExtResource("3_ow2md")]
+visible = false
+position = Vector2(558, 381)
+scale = Vector2(5, 5)
 
 [node name="Accept" type="Button" parent="." groups=["store_group"]]
-offset_left = 678.0
-offset_top = 231.0
-offset_right = 802.0
-offset_bottom = 262.0
+offset_left = 793.0
+offset_top = 322.0
+offset_right = 917.0
+offset_bottom = 353.0
 shortcut = SubResource("Shortcut_dt45t")
 text = "Sold!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Bargain" type="Button" parent="."]
-offset_left = 677.0
-offset_top = 274.0
-offset_right = 803.0
-offset_bottom = 305.0
+offset_left = 792.0
+offset_top = 365.0
+offset_right = 918.0
+offset_bottom = 396.0
 text = "Bargain..."
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = 78.0
-offset_top = 43.0
-offset_right = 801.0
-offset_bottom = 208.0
+offset_left = 192.0
+offset_top = 134.0
+offset_right = 915.0
+offset_bottom = 299.0
 
 [node name="Dialog" type="RichTextLabel" parent="PanelContainer"]
 layout_mode = 2
@@ -48,11 +57,9 @@ size_flags_vertical = 0
 bbcode_enabled = true
 fit_content = true
 
-[node name="Shelves" parent="." instance=ExtResource("2_1ys6d")]
-position = Vector2(990, 350)
-
-[node name="BargainMinigame" parent="." instance=ExtResource("3_ow2md")]
-position = Vector2(444, 290)
-scale = Vector2(5, 5)
+[node name="Counter" type="Sprite2D" parent="."]
+position = Vector2(752, 545)
+texture = ExtResource("5_j3wj6")
 
 [connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="Bargain" to="." method="_on_bargain_pressed"]

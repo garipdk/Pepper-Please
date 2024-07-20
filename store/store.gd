@@ -56,4 +56,6 @@ func are_all_bowls_empty():
 		empty_spices.append(spice.empty_bowl)
 	if not false in empty_spices:
 		return true
-		
+
+func _on_bargain_pressed():
+	$BargainMinigame.visible = true

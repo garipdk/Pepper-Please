@@ -19,7 +19,11 @@ func _physics_process(delta):
 			direction *= -1
 			
 func _input(event: InputEvent) -> void:
+
 	if event is InputEventMouseButton:
+		var mousePos = get_global_mouse_position()
+		# Check if there is a collision at the mouse position
+		#if $Sprite2D/Area2D/CollisionShape2D.intersect_point(mousePos, 1):
 		is_moving = false
 		multiplier = calculate_bonus()
 		print(multiplier)
@@ -31,5 +35,5 @@ func calculate_bonus():
 	if final_position > bar_width / 8:
 		return 1.05
 	if bar_width > bar_width / 16:
-		return 0.9	
+		return 0.9
 	return 1.1
