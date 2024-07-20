@@ -8,9 +8,9 @@
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_xbcdk")
 
-[node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
-
 [node name="Store" parent="." instance=ExtResource("4_xprbr")]
+
+[node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
 
 [node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
 position = Vector2(990, 350)
