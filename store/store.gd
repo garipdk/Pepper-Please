@@ -21,6 +21,8 @@ func _process(delta):
 func new_transaction(list_spices):
 	if are_all_bowls_empty():
 		$PanelContainer/Dialog.text = "Ow oh! \n There's no more spices to sell here. Maybe I should explore a bit around?"
+		$Accept.visible = false
+		$Bargain.visible = false
 		return {}
 	var rand_spice_number: int = rng.randi_range(0, number_of_unlocked_spices)
 	var spice_bowl: SpiceBowl = list_spices[rand_spice_number]
@@ -50,9 +52,7 @@ func are_all_bowls_empty():
 	var empty_spices: Array[bool]
 	for i in range(0, number_of_unlocked_spices+1):
 		var spice = list_spices[i]
-		print(spice.empty_bowl)
 		empty_spices.append(spice.empty_bowl)
-	print(empty_spices)
 	if not false in empty_spices:
 		return true
 		

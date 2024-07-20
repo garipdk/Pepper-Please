@@ -14,9 +14,10 @@ var empty_bowl: bool = false
 func _ready():
 	var bowl_width = $Sprite2D.texture.get_width() * $Sprite2D.scale[0]
 	%Line2D.default_color = color
-	%Line2D.set_point_position(0, Vector2(-bowl_width/2, 0))
+	var offset = 10
+	%Line2D.set_point_position(0, Vector2(-bowl_width/2 + offset, 0))
 	%Line2D.set_point_position(1, Vector2(0, -ammount))
-	%Line2D.set_point_position(2, Vector2(bowl_width/2, 0))
+	%Line2D.set_point_position(2, Vector2(bowl_width/2 -offset, 0))
 	
 	var store: Store = get_tree().get_nodes_in_group("store_group")[0]
 	store.transation_done.connect(_on_transaction)

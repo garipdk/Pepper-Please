@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmggp4lpg06wt"]
+[gd_scene load_steps=9 format=3 uid="uid://bowa1t8nssmqe"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_0w3gs"]
 [ext_resource type="PackedScene" uid="uid://ftaxkqoanpy0" path="res://map/Player/map_player.tscn" id="1_lo1dr"]
-[ext_resource type="Texture2D" uid="uid://0rlm47o2fwkc" path="res://map/water.png" id="2_b030n"]
+[ext_resource type="Texture2D" uid="uid://24f56rr0jvkk" path="res://map/water.png" id="2_b030n"]
 [ext_resource type="Texture2D" uid="uid://c5rwwdr4bqqar" path="res://map/island.png" id="3_t5n70"]
 [ext_resource type="PackedScene" uid="uid://c76dqruxme274" path="res://map/Place/map_place.tscn" id="5_6hm8e"]
 [ext_resource type="Texture2D" uid="uid://cfvccc5tq2dfs" path="res://map/Place/arrow.png" id="5_ts8m5"]
