@@ -18,14 +18,14 @@ func _ready():
 	%Line2D.set_point_position(1, Vector2(0, -ammount))
 	%Line2D.set_point_position(2, Vector2(bowl_width/2, 0))
 	
-	var store: Store = get_tree().get_nodes_in_group("store_group")[0]
-	store.transation_done.connect(_on_transaction)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
+func connect_transation(store:Store):
+	store.transation_done.connect(_on_transaction)
+
 func _on_transaction(bargain_ammount: int, spice_type: String):
 	print("transaction of" + spice_type)
 	if spice_type == spice_name:

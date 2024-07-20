@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://rngm0luugq5a"]
 
 [ext_resource type="Script" path="res://shelves/shelves.gd" id="1_bhmsi"]
-[ext_resource type="Texture2D" uid="uid://dgdkf74fnnf18" path="res://sprites/SpiceHolder.png" id="1_rwtf6"]
+[ext_resource type="Texture2D" uid="uid://c783piq0r4nsj" path="res://sprites/SpiceHolder.png" id="1_rwtf6"]
 [ext_resource type="PackedScene" uid="uid://dgdsf6n7ydbmv" path="res://spice_bowl/bowl.tscn" id="2_p6nlr"]
 
 [node name="Shelves" type="Node2D"]

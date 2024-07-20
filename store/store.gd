@@ -11,7 +11,8 @@ var list_spices: Array[SpiceBowl]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().process_frame
-	list_spices = [$Shelves/Salt, $Shelves/Laurel, $Shelves/Cinnamon, $Shelves/Fenugreek, $Shelves/Saffron]	
+	list_spices = [PepperGlobal.shelves.get_node("Salt"), PepperGlobal.shelves.get_node("Laurel"),
+	PepperGlobal.shelves.get_node("Cinnamon"), PepperGlobal.shelves.get_node("Fenugreek"), PepperGlobal.shelves.get_node("Saffron")]	
 	transaction = new_transaction(list_spices)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,7 +40,7 @@ func new_transaction(list_spices):
 	
 func do_transaction(transaction: Dictionary):
 	money += transaction.gold_gained
-	$Shelves/GoldCounter.text = str(money)
+	PepperGlobal.shelves.get_node("GoldCounter").text = str(money)
 	transation_done.emit(transaction.ammount_sold, transaction.spice_name)
 
 func _on_accept_pressed():
