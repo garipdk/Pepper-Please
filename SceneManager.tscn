@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://lrgr1hgydx73"]
+
+[ext_resource type="Script" path="res://SceneManager.gd" id="1_xbcdk"]
+[ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_wovr8"]
+
+[node name="SceneManager" type="Node2D"]
+script = ExtResource("1_xbcdk")
+
+[node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
+position = Vector2(990, 350)
