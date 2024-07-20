@@ -1,5 +1,4 @@
 extends Node
-
 class Spice:
 	var spice_name: String
 	var min_value: float
