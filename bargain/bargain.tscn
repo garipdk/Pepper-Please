@@ -18,7 +18,6 @@ texture = ExtResource("2_rgey0")
 modulate = Color(0.05325, 0.06, 0.015, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kx6ad")
 
 [node name="Arrow" type="Sprite2D" parent="."]
