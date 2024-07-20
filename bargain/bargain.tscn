@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://jyu4okouk407"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx6ad"]
+size = Vector2(30, 6)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_4bipm"]
+points = PackedVector2Array(-0.5, 2, 0, 0, 0.5, 2)
+
+[node name="Bargain" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+modulate = Color(0.05325, 0.06, 0.015, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kx6ad")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, -1)
+shape = SubResource("ConvexPolygonShape2D_4bipm")

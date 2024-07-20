@@ -1,3 +1,8 @@
 {
-	"intro": "Hum, the landing was not ideal... But I think this is the correct planet for the SUPER-PEPPEEERRRR!"
+	"intro": "Hum, the landing was not ideal... But I think this is the correct planet for the SUPER-PEPPEEERRRR!",
+	"pepperlab": {
+		"first_visit": "Hi? Is it... the Spice Lab (TM)? The place where peppers are genetically engineered for the hottest spiciness everrr?",
+		"next_visits": "Wwaaaah, that's something. I wish I coud try it :(",
+		"response": "Ze price for ze pepper is not somezing you can afford."
+	}
 }
