@@ -23,9 +23,6 @@ rotation = 0.00311007
 texture = ExtResource("3_t5n70")
 centered = false
 
-[node name="WaterShore" parent="." instance=ExtResource("5_6hm8e")]
-position = Vector2(206, 561)
-
 [node name="Port" parent="." instance=ExtResource("5_6hm8e")]
 position = Vector2(543, 379)
 
@@ -33,7 +30,7 @@ position = Vector2(543, 379)
 position = Vector2(392, 161)
 
 [node name="SpaceShip" parent="." instance=ExtResource("5_6hm8e")]
-position = Vector2(352, 363)
+position = Vector2(195, 421)
 place_image_path = ExtResource("5_ts8m5")
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -45,15 +42,13 @@ loop = false
 script = ExtResource("6_q2ttw")
 
 [node name="MapPlayer" parent="Path2D/PathFollow2D" instance=ExtResource("1_lo1dr")]
-position = Vector2(342, 370)
+position = Vector2(306, 432)
 scale = Vector2(0.4, 0.4)
 
-[connection signal="gui_input" from="WaterShore/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("WaterShore")]]
 [connection signal="gui_input" from="Port/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Port")]]
 [connection signal="gui_input" from="PepperPlace/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("PepperPlace")]]
 [connection signal="gui_input" from="SpaceShip/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("SpaceShip")]]
 
-[editable path="WaterShore"]
 [editable path="Port"]
 [editable path="PepperPlace"]
 [editable path="SpaceShip"]
