@@ -9,11 +9,12 @@
 script = ExtResource("1_xbcdk")
 
 [node name="Store" parent="." instance=ExtResource("4_xprbr")]
+position = Vector2(0, -2)
 
 [node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
 
 [node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
-position = Vector2(990, 350)
+position = Vector2(1722, 571)
 
 [connection signal="body_entered" from="MapScene/Port/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Port")]]
 [connection signal="body_entered" from="MapScene/PepperPlace/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("PepperPlace")]]

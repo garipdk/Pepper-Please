@@ -16,6 +16,5 @@ default_color = Color(0, 0, 0, 1)
 texture = ExtResource("2_ejulm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -59)
-scale = Vector2(0.55, 0.55)
+position = Vector2(0, -86)
 texture = ExtResource("3_xye8n")
