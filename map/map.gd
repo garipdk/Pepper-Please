@@ -32,3 +32,10 @@ func _on_map_place_mouse_control_gui_input(event:InputEvent, extra_arg_0:NodePat
 		$Label.visible = false
 		$LabelBack.visible = false
 	pass # Replace with function body.
+
+
+func _on_label_visibility_changed():
+	if not $Label.visible:
+		$Timer.queue_free()
+		$Store/MapPlaceMouseControl/Arrow.visible = false
+	pass # Replace with function body.
