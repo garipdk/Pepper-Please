@@ -27,6 +27,7 @@ offset_bottom = 175.0
 texture = ExtResource("5_nksx1")
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 1371.0
 offset_top = 9.0
 offset_right = 1495.0
