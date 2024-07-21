@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 
 	await  get_tree().process_frame
-	$Label.text = PepperGlobal.dialogs.get("intro", "")
+	$PanelContainer/Label.text = PepperGlobal.dialogs.get("intro", "")
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,13 +26,12 @@ func _on_map_place_mouse_control_gui_input(event:InputEvent, extra_arg_0:NodePat
 		$Path2D/PathFollow2D.progress_ratio = 0.
 		$Path2D/PathFollow2D.loop = false
 		$Path2D/PathFollow2D.is_moving = true
-		$Label.visible = false
-		$LabelBack.visible = false
+		$PanelContainer.visible = false
 	pass # Replace with function body.
 
 
 func _on_label_visibility_changed():
-	if not $Label.visible:
+	if not $PanelContainer.visible:
 		$Timer.queue_free()
 		$Store/MapPlaceMouseControl/Arrow.visible = false
 	pass # Replace with function body.

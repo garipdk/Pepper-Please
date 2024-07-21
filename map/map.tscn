@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bowa1t8nssmqe"]
+[gd_scene load_steps=8 format=3 uid="uid://bowa1t8nssmqe"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_0w3gs"]
 [ext_resource type="PackedScene" uid="uid://ftaxkqoanpy0" path="res://map/Player/map_player.tscn" id="1_lo1dr"]
-[ext_resource type="Texture2D" uid="uid://24f56rr0jvkk" path="res://map/water.png" id="2_b030n"]
-[ext_resource type="Texture2D" uid="uid://c5rwwdr4bqqar" path="res://map/island.png" id="3_t5n70"]
+[ext_resource type="Texture2D" uid="uid://d0ku048oel265" path="res://sprites/Map.png" id="2_6akp4"]
 [ext_resource type="PackedScene" uid="uid://c76dqruxme274" path="res://map/Place/map_place.tscn" id="5_6hm8e"]
 [ext_resource type="Texture2D" uid="uid://cfvccc5tq2dfs" path="res://map/Place/arrow.png" id="5_ts8m5"]
 [ext_resource type="Script" path="res://map/Player/PathFollow2D.gd" id="6_q2ttw"]
@@ -13,17 +12,8 @@
 [node name="MapScene" type="Node2D"]
 script = ExtResource("1_0w3gs")
 
-[node name="Sea" type="Sprite2D" parent="."]
-position = Vector2(-121, -83)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("2_b030n")
-centered = false
-
-[node name="Island" type="Sprite2D" parent="."]
-position = Vector2(50, 17)
-rotation = 0.00311007
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("3_t5n70")
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("2_6akp4")
 centered = false
 
 [node name="Port" parent="." instance=ExtResource("5_6hm8e")]
@@ -49,27 +39,34 @@ position = Vector2(336, 495)
 scale = Vector2(0.6, 0.6)
 
 [node name="LabelBack" type="ColorRect" parent="."]
+visible = false
 offset_right = 1714.0
 offset_bottom = 400.0
 color = Color(0.486275, 0.0705882, 0.0705882, 1)
-
-[node name="Label" type="Label" parent="."]
-offset_left = 44.0
-offset_top = 37.0
-offset_right = 1386.0
-offset_bottom = 171.0
-theme_override_font_sizes/font_size = 75
-autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0.733333)
+offset_left = 135.0
+offset_top = 75.0
+offset_right = 1291.0
+offset_bottom = 280.0
+
+[node name="Label" type="Label" parent="PanelContainer"]
+custom_minimum_size = Vector2(1156, 205)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+autowrap_mode = 3
+
 [connection signal="gui_input" from="Port/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Port")]]
 [connection signal="gui_input" from="PepperPlace/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("PepperPlace")]]
 [connection signal="gui_input" from="Store/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Store")]]
-[connection signal="visibility_changed" from="Label" to="." method="_on_label_visibility_changed"]
 [connection signal="timeout" from="Timer" to="Store" method="_on_timer_timeout"]
+[connection signal="visibility_changed" from="PanelContainer/Label" to="." method="_on_label_visibility_changed"]
 
 [editable path="Port"]
 [editable path="PepperPlace"]
