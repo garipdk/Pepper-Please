@@ -47,7 +47,7 @@ offset_bottom = 388.0
 text = "Bargain..."
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-modulate = Color(0.55, 0.3982, 0.154, 0.733333)
+modulate = Color(1, 1, 1, 0.733333)
 offset_left = 135.0
 offset_top = 75.0
 offset_right = 1291.0
