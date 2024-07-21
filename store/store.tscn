@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=9 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
 [ext_resource type="Texture2D" uid="uid://c64wb6qvvk63x" path="res://dark_rectange.png" id="2_t3if4"]
 [ext_resource type="Texture2D" uid="uid://bhc4fh0rhcbhq" path="res://sprites/MaketPlace.png" id="3_m2fvj"]
 [ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
 [ext_resource type="Texture2D" uid="uid://nto70t2lb6ui" path="res://sprites/Counter.png" id="5_j3wj6"]
+[ext_resource type="PackedScene" uid="uid://dyxelduryjqj8" path="res://back_to_map/back_to_map.tscn" id="6_gg7cf"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
 keycode = 4194309
@@ -60,6 +61,9 @@ fit_content = true
 [node name="Counter" type="Sprite2D" parent="."]
 position = Vector2(752, 545)
 texture = ExtResource("5_j3wj6")
+
+[node name="BackToMap" parent="." instance=ExtResource("6_gg7cf")]
+position = Vector2(1436, 70)
 
 [connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
 [connection signal="pressed" from="Bargain" to="." method="_on_bargain_pressed"]
