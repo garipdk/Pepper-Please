@@ -9,15 +9,14 @@ func _ready():
 
 func _input(event:InputEvent):
 	if event.is_action_pressed("ui_cancel"):
-		move_child($MapScene, 1)
+		move_child($MapScene, 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if PepperGlobal.canChangeScene:
-		print("toto")
 		print(current_destination_map.get_name(0))
-		if current_destination_map.get_name(0) == "Store":
-			move_child(get_node(current_destination_map), 1)
+		#if current_destination_map.get_name(0) == "Store":
+		move_child(get_node(current_destination_map), 2)
 		PepperGlobal.canChangeScene = false
 
 
@@ -35,4 +34,4 @@ func _on_texture_rect_gui_input(event:InputEvent):
 
 
 func _on_texture_button_pressed():
-	move_child($MapScene, 1)
+	move_child($MapScene, 2)

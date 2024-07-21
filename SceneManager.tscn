@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://lrgr1hgydx73"]
+[gd_scene load_steps=9 format=3 uid="uid://lrgr1hgydx73"]
 
 [ext_resource type="Script" path="res://SceneManager.gd" id="1_xbcdk"]
 [ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_wovr8"]
 [ext_resource type="PackedScene" uid="uid://bowa1t8nssmqe" path="res://map/map.tscn" id="3_40ikb"]
+[ext_resource type="PackedScene" uid="uid://dkk8b8ulupjdh" path="res://port/port.tscn" id="3_pc74c"]
 [ext_resource type="PackedScene" uid="uid://bnn0xn5odgc7t" path="res://store/store.tscn" id="4_xprbr"]
 [ext_resource type="Texture2D" uid="uid://dnu55ysubiwky" path="res://sprites/RedCross.png" id="5_nksx1"]
 [ext_resource type="Texture2D" uid="uid://c5wvumd12u0t8" path="res://back_to_map/icone.png" id="6_f864l"]
@@ -13,6 +14,9 @@ script = ExtResource("1_xbcdk")
 
 [node name="Store" parent="." instance=ExtResource("4_xprbr")]
 position = Vector2(0, -2)
+
+[node name="Port" parent="." instance=ExtResource("3_pc74c")]
+position = Vector2(-6, -3)
 
 [node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
 
