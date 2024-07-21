@@ -15,7 +15,7 @@ position = Vector2(0, -2)
 [node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
 
 [node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
-position = Vector2(1722, 571)
+position = Vector2(1714, 570)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 1420.0

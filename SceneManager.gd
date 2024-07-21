@@ -15,6 +15,7 @@ func _input(event:InputEvent):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if PepperGlobal.canChangeScene:
+		print("toto")
 		print(current_destination_map.get_name(0))
 		if current_destination_map.get_name(0) == "Store":
 			move_child(get_node(current_destination_map), 1)
