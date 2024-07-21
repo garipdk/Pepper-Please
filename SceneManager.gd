@@ -9,12 +9,8 @@ func _ready():
 
 func _input(event:InputEvent):
 	if event.is_action_pressed("ui_cancel"):
-<<<<<<< HEAD
-		move_child($MapScene, 1)
 		$TextureButton.visible = false
-=======
 		move_child($MapScene, 2)
->>>>>>> 624768557f11323ba4a7fdb92163b6b55d5a79ce
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -40,9 +36,5 @@ func _on_texture_rect_gui_input(event:InputEvent):
 
 
 func _on_texture_button_pressed():
-<<<<<<< HEAD
-	move_child($MapScene, 1)
 	$TextureButton.visible = false
-=======
 	move_child($MapScene, 2)
->>>>>>> 624768557f11323ba4a7fdb92163b6b55d5a79ce
