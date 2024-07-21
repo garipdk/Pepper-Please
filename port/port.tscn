@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://dkk8b8ulupjdh"]
+[gd_scene load_steps=2 format=3 uid="uid://dkk8b8ulupjdh"]
+
+[ext_resource type="Texture2D" uid="uid://cgveqosm2jrna" path="res://sprites/Docks.png" id="1_lund0"]
 
 [node name="Port" type="Node2D"]
+
+[node name="Docks" type="Sprite2D" parent="."]
+texture = ExtResource("1_lund0")
+centered = false

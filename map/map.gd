@@ -10,8 +10,7 @@ func _ready():
 	await  get_tree().process_frame
 	if json_as_dict.has("intro"):
 		$Label.text = json_as_dict.get("intro")
-	pass # Replace with function body.
-
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,4 +30,5 @@ func _on_map_place_mouse_control_gui_input(event:InputEvent, extra_arg_0:NodePat
 		$Path2D/PathFollow2D.loop = false
 		$Path2D/PathFollow2D.is_moving = true
 		$Label.visible = false
+		$LabelBack.visible = false
 	pass # Replace with function body.
