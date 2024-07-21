@@ -26,9 +26,7 @@ func _on_scene_manager_child_order_changed():
 
 
 func _on_accept_pressed():
-	if PepperGlobal.money >= 100000:
-		pass # WIN !!!
-	else:
+	if PepperGlobal.money < 100000:
 		$Accept.visible = false
 		$PanelContainer/Label.text = PepperGlobal.dialogs.get("pepperlab", {}).get("response", "")
 	pass # Replace with function body.
