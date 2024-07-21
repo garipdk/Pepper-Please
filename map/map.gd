@@ -4,12 +4,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var file = "res://intro.json"
-	var json_as_text = FileAccess.get_file_as_string(file)
-	var json_as_dict:Dictionary = JSON.parse_string(json_as_text)
+
 	await  get_tree().process_frame
-	if json_as_dict.has("intro"):
-		$Label.text = json_as_dict.get("intro")
+	$Label.text = PepperGlobal.dialogs.get("intro", "")
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

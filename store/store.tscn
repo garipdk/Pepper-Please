@@ -31,26 +31,27 @@ position = Vector2(558, 381)
 scale = Vector2(5, 5)
 
 [node name="Accept" type="Button" parent="." groups=["store_group"]]
-offset_left = 793.0
-offset_top = 322.0
-offset_right = 917.0
-offset_bottom = 353.0
+offset_left = 1166.0
+offset_top = 314.0
+offset_right = 1290.0
+offset_bottom = 345.0
 shortcut = SubResource("Shortcut_dt45t")
 text = "Sold!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Bargain" type="Button" parent="."]
-offset_left = 792.0
-offset_top = 365.0
-offset_right = 918.0
-offset_bottom = 396.0
+offset_left = 1165.0
+offset_top = 357.0
+offset_right = 1291.0
+offset_bottom = 388.0
 text = "Bargain..."
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = 192.0
-offset_top = 134.0
-offset_right = 915.0
-offset_bottom = 299.0
+modulate = Color(0.55, 0.3982, 0.154, 0.733333)
+offset_left = 135.0
+offset_top = 75.0
+offset_right = 1291.0
+offset_bottom = 280.0
 
 [node name="Dialog" type="RichTextLabel" parent="PanelContainer"]
 layout_mode = 2
