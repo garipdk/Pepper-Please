@@ -10,14 +10,14 @@ func _ready():
 func _input(event:InputEvent):
 	if event.is_action_pressed("ui_cancel"):
 		$TextureButton.visible = false
-		move_child($MapScene, 2)
+		move_child($MapScene, 3)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if PepperGlobal.canChangeScene:
 		print(current_destination_map.get_name(0))
 		#if current_destination_map.get_name(0) == "Store":
-		move_child(get_node(current_destination_map), 2)
+		move_child(get_node(current_destination_map), 3)
 		PepperGlobal.canChangeScene = false
 		$TextureButton.visible = true
 
@@ -37,4 +37,4 @@ func _on_texture_rect_gui_input(event:InputEvent):
 
 func _on_texture_button_pressed():
 	$TextureButton.visible = false
-	move_child($MapScene, 2)
+	move_child($MapScene, 3)
