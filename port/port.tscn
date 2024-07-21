@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mjoaouvsr83p" path="res://sprites/SpicePile.png" id="3_qpfu4"]
 [ext_resource type="Texture2D" uid="uid://deiwwlksty3dw" path="res://sprites/SpiceBowl2.png" id="4_c23ce"]
 
-[node name="Port" type="Node2D"]
+[node name="Port" type="Node2D" groups=["port_group"]]
 script = ExtResource("1_05dbf")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
@@ -30,7 +30,7 @@ offset_bottom = 307.0
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 40
 
-[node name="SpicePile" type="Sprite2D" parent="."]
+[node name="SpicePile" type="Sprite2D" parent="." groups=["port_group"]]
 position = Vector2(425, 574)
 texture = ExtResource("3_qpfu4")
 

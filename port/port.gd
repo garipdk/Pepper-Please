@@ -1,4 +1,7 @@
+class_name Port
 extends Node2D
+
+var already_poor: bool = false
 
 var spices_colors: Array[Color] = [
 	Color("#2e5f61"),
@@ -34,4 +37,13 @@ func _on_texture_button_pressed():
 	if PepperGlobal.money >= spices_price[PepperGlobal.number_of_unlocked_spices]:
 		PepperGlobal.number_of_unlocked_spices += 1
 		update_text()
+		PepperGlobal.unlocked_spice.emit()
+		already_poor = false
+	else:
+		if not already_poor:
+			already_poor = true
+			$PanelContainer/RichTextLabel.add_text("Oh no lil' sailor, you don't have enough to buy that.")
+
+func wait(seconds: float) -> void:
+	await get_tree().create_timer(seconds).timeout
 		

@@ -1,9 +1,16 @@
 class_name Shelves
 extends Node2D
 
+var spices_nodes: Array
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	await  get_tree().process_frame
+	spices_nodes = [
+	$Salt, $Laurel, $Cinnamon, $Fenugreek, $Saffron
+	]
+	PepperGlobal.unlocked_spice.connect(on_unlocked_spice)
+
 func connect_all_transations(store:Store):
 	$Salt.connect_transation(store)
 	$Laurel.connect_transation(store)
@@ -15,4 +22,7 @@ func connect_all_transations(store:Store):
 func _process(delta):
 	pass
 	
-
+func on_unlocked_spice():
+	spices_nodes[PepperGlobal.number_of_unlocked_spices].visible = true
+	
+	
