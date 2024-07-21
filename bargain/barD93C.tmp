@@ -11,17 +11,11 @@ script = ExtResource("1_i3kqv")
 scale = Vector2(0.157714, 0.0961137)
 texture = ExtResource("2_rgey0")
 
-[node name="BargainButton" type="Button" parent="Sprite2D"]
+[node name="Area2D" type="Button" parent="Sprite2D"]
 modulate = Color(0.05325, 0.06, 0.015, 1)
-offset_left = -197.0
-offset_top = -31.0
-offset_right = 197.0
-offset_bottom = 31.0
 
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(-2.27374e-13, -6)
 rotation = 3.14159
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_5unfq")
-
-[connection signal="pressed" from="Sprite2D/BargainButton" to="." method="_on_bargain_button_pressed"]
