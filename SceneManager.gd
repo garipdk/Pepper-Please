@@ -38,3 +38,8 @@ func _on_texture_rect_gui_input(event:InputEvent):
 func _on_texture_button_pressed():
 	$TextureButton.visible = false
 	move_child($MapScene, 3)
+
+
+func _on_accept_pressed():
+	if PepperGlobal.money >= 100000:
+		pass # WIN !!!

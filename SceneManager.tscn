@@ -44,6 +44,7 @@ texture_pressed = ExtResource("6_f864l")
 texture_hover = ExtResource("7_piasy")
 
 [connection signal="child_order_changed" from="." to="PepperPlace" method="_on_scene_manager_child_order_changed"]
+[connection signal="pressed" from="PepperPlace/Accept" to="." method="_on_accept_pressed"]
 [connection signal="body_entered" from="MapScene/Port/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Port")]]
 [connection signal="body_entered" from="MapScene/PepperPlace/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("PepperPlace")]]
 [connection signal="body_entered" from="MapScene/Store/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Store")]]
@@ -51,6 +52,7 @@ texture_hover = ExtResource("7_piasy")
 [connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 
+[editable path="PepperPlace"]
 [editable path="MapScene"]
 [editable path="MapScene/Port"]
 [editable path="MapScene/PepperPlace"]
