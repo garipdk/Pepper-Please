@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://lrgr1hgydx73"]
+[gd_scene load_steps=11 format=3 uid="uid://lrgr1hgydx73"]
 
 [ext_resource type="Script" path="res://SceneManager.gd" id="1_xbcdk"]
 [ext_resource type="PackedScene" uid="uid://bw02b82t382pm" path="res://pepper_place/PepperPlace.tscn" id="2_tooe1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dnu55ysubiwky" path="res://sprites/RedCross.png" id="5_nksx1"]
 [ext_resource type="Texture2D" uid="uid://c5wvumd12u0t8" path="res://back_to_map/icone.png" id="6_f864l"]
 [ext_resource type="Texture2D" uid="uid://4ud25glmn024" path="res://back_to_map/icone_hovered.png" id="7_piasy"]
+[ext_resource type="Texture2D" uid="uid://dkc3vamwtrson" path="res://sprites/FinalScreen.png" id="9_2o0qp"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_xbcdk")
@@ -35,6 +36,35 @@ offset_bottom = 133.0
 texture_normal = ExtResource("6_f864l")
 texture_pressed = ExtResource("6_f864l")
 texture_hover = ExtResource("7_piasy")
+
+[node name="ColorRectFilnalScreenWin" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="FinalScreen" type="Sprite2D" parent="ColorRectFilnalScreenWin"]
+position = Vector2(960, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("9_2o0qp")
+
+[node name="ColorRectFilnalScreenLoose" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRectFilnalScreenLoose"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 466.0
+offset_right = 1326.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "YOU LOOSE !"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 1867.0

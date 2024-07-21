@@ -7,9 +7,10 @@ func _ready():
 	$Shelves.connect_all_transations($Store)
 	$TextureRect.scale = Vector2(0.3, 0.3)
 	PepperGlobal.money_changed.connect(_on_money_changed)
+
 func _on_money_changed():
 	if $Port.spices_price[PepperGlobal.number_of_unlocked_spices] < PepperGlobal.monney and $Store.are_all_bowls_empty():
-		pass #loose !!
+		$ColorRectFilnalScreenLoose.visible = true
 		
 func _input(event:InputEvent):
 	if event.is_action_pressed("ui_cancel"):
@@ -45,4 +46,5 @@ func _on_texture_button_pressed():
 
 func _on_accept_pressed():
 	if PepperGlobal.money >= 100000:
+		$ColorRectFilnalScreenWin.visible = true
 		pass # WIN !!!
