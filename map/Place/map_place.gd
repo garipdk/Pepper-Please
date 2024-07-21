@@ -15,3 +15,8 @@ func _ready():
 func _process(delta):
 	pass
 
+
+
+func _on_timer_timeout():
+	$MapPlaceMouseControl/Arrow.visible = !$MapPlaceMouseControl/Arrow.visible
+	pass # Replace with function body.

@@ -61,9 +61,15 @@ offset_bottom = 171.0
 theme_override_font_sizes/font_size = 75
 autowrap_mode = 3
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="gui_input" from="Port/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Port")]]
 [connection signal="gui_input" from="PepperPlace/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("PepperPlace")]]
 [connection signal="gui_input" from="Store/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Store")]]
+[connection signal="visibility_changed" from="Label" to="." method="_on_label_visibility_changed"]
+[connection signal="timeout" from="Timer" to="Store" method="_on_timer_timeout"]
 
 [editable path="Port"]
 [editable path="PepperPlace"]
