@@ -21,15 +21,20 @@ offset_left = 192.0
 offset_top = 134.0
 offset_right = 915.0
 offset_bottom = 299.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 1
 
-[node name="Accept" type="Button" parent="." groups=["store_group"]]
+[node name="Accept" type="Button" parent="."]
 offset_left = 793.0
 offset_top = 322.0
 offset_right = 917.0
 offset_bottom = 353.0
 shortcut = SubResource("Shortcut_luwju")
-text = "I want it !!!"
+text = "I want it !!! It's 100000 !"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
