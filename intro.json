@@ -6,7 +6,6 @@
 		"response": "Ze price for ze pepper is not somezing you can afford."
 	},
 	"boat": {
-		"first_visit": "Arrrhl, welcome little fish. Yerrr want some gooddy spices?",
-		"next_visits": "Come, have a look at what we've got!"
+		"first_visit": "Arrrhl, welcome little fish. Yerrr want some gooddy spices? Come, have a look at what we've got!",
 	}
 }
