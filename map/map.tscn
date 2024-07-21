@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bowa1t8nssmqe"]
+[gd_scene load_steps=10 format=3 uid="uid://bowa1t8nssmqe"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_0w3gs"]
 [ext_resource type="PackedScene" uid="uid://ftaxkqoanpy0" path="res://map/Player/map_player.tscn" id="1_lo1dr"]
 [ext_resource type="Texture2D" uid="uid://d0ku048oel265" path="res://sprites/Map.png" id="2_6akp4"]
+[ext_resource type="Texture2D" uid="uid://djgy1sswxla0l" path="res://sprites/Button_Docks.png" id="4_wtku7"]
 [ext_resource type="Texture2D" uid="uid://b3q62thvrbsv3" path="res://sprites/Button_Town.png" id="4_xgnql"]
 [ext_resource type="PackedScene" uid="uid://c76dqruxme274" path="res://map/Place/map_place.tscn" id="5_6hm8e"]
+[ext_resource type="Texture2D" uid="uid://dk0v0rot5eib8" path="res://sprites/Button_Lab.png" id="5_fexx8"]
 [ext_resource type="Script" path="res://map/Player/PathFollow2D.gd" id="6_q2ttw"]
 
 [sub_resource type="Curve2D" id="Curve2D_474dy"]
@@ -18,9 +20,11 @@ centered = false
 
 [node name="Port" parent="." instance=ExtResource("5_6hm8e")]
 position = Vector2(1112, 777)
+place_image_path = ExtResource("4_wtku7")
 
 [node name="PepperPlace" parent="." instance=ExtResource("5_6hm8e")]
 position = Vector2(1046, 514)
+place_image_path = ExtResource("5_fexx8")
 
 [node name="Store" parent="." instance=ExtResource("5_6hm8e")]
 position = Vector2(158, 802)

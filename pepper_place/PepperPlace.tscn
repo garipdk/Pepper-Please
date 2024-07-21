@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw02b82t382pm"]
+[gd_scene load_steps=5 format=3 uid="uid://bw02b82t382pm"]
 
 [ext_resource type="Script" path="res://pepper_place/PepperPlace.gd" id="1_g5yfb"]
+[ext_resource type="Texture2D" uid="uid://7da4gbu528k0" path="res://sprites/Lab.png" id="2_1swkj"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
 keycode = 4194309
@@ -15,6 +16,10 @@ script = ExtResource("1_g5yfb")
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
+
+[node name="Lab" type="Sprite2D" parent="."]
+texture = ExtResource("2_1swkj")
+centered = false
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 192.0

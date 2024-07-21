@@ -26,11 +26,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq7bn"]
-radius = 150.0
+radius = 60.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_h8yjq")
 frame_progress = 0.154273
 script = ExtResource("4_rxgy6")
