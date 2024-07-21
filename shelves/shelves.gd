@@ -1,3 +1,4 @@
+class_name Shelves
 extends Node2D
 
 # Called when the node enters the scene tree for the first time.
@@ -13,3 +14,5 @@ func connect_all_transations(store:Store):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+

@@ -25,6 +25,7 @@ color = Color(0.592157, 0.72549, 1, 1)
 
 [node name="Laurel" parent="." instance=ExtResource("2_p6nlr")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-108, 63)
 min_value = 10.0
 max_value = 20.0
@@ -33,6 +34,7 @@ color = Color(0.182212, 0.371567, 0.381882, 1)
 
 [node name="Cinnamon" parent="." instance=ExtResource("2_p6nlr")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(101, 64)
 min_value = 20.0
 max_value = 50.0
@@ -41,19 +43,21 @@ color = Color(0.54, 0.37503, 0.2862, 1)
 
 [node name="Fenugreek" parent="." instance=ExtResource("2_p6nlr")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-108, 420)
 min_value = 50.0
 max_value = 100.0
 spice_name = "saffron"
-color = Color(0.73, 0.0219, 0.128115, 1)
+color = Color(0.79, 0.5767, 0.079, 1)
 
 [node name="Saffron" parent="." instance=ExtResource("2_p6nlr")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(102, 420)
 min_value = 100.0
 max_value = 1000.0
 spice_name = "fenugreek"
-color = Color(0.8, 0.673867, 0.112, 1)
+color = Color(0.8, 0.112, 0.112, 1)
 
 [node name="GoldCoinBigVersion" type="Sprite2D" parent="."]
 position = Vector2(-154, -300)

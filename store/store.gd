@@ -1,7 +1,6 @@
 class_name Store
 extends Node2D
 
-var number_of_unlocked_spices: int = 0
 var rng = RandomNumberGenerator.new()
 signal transation_done(int, String)
 var transaction: Dictionary
@@ -32,7 +31,7 @@ func new_transaction(list_spices):
 	$Bargain.visible = true
 	$Accept.visible = true
 	multiplier = 1
-	var rand_spice_number: int = rng.randi_range(0, number_of_unlocked_spices)
+	var rand_spice_number: int = rng.randi_range(0, PepperGlobal.number_of_unlocked_spices)
 	var spice_bowl: SpiceBowl = list_spices[rand_spice_number]
 	ammount = rng.randi_range(1, spice_bowl.ammount)
 	bargain_value = rng.randi_range(spice_bowl.min_value, spice_bowl.max_value)
@@ -58,7 +57,7 @@ func _on_accept_pressed():
 	
 func are_all_bowls_empty():
 	var empty_spices: Array[bool]
-	for i in range(0, number_of_unlocked_spices+1):
+	for i in range(0, PepperGlobal.number_of_unlocked_spices+1):
 		var spice = list_spices[i]
 		empty_spices.append(spice.empty_bowl)
 	if not false in empty_spices:

@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://lrgr1hgydx73"]
+
+[ext_resource type="Script" path="res://SceneManager.gd" id="1_xbcdk"]
+[ext_resource type="PackedScene" uid="uid://rngm0luugq5a" path="res://shelves/shelves.tscn" id="2_wovr8"]
+[ext_resource type="PackedScene" uid="uid://bowa1t8nssmqe" path="res://map/map.tscn" id="3_40ikb"]
+[ext_resource type="PackedScene" uid="uid://dkk8b8ulupjdh" path="res://port/port.tscn" id="3_pc74c"]
+[ext_resource type="PackedScene" uid="uid://bnn0xn5odgc7t" path="res://store/store.tscn" id="4_xprbr"]
+[ext_resource type="Texture2D" uid="uid://dnu55ysubiwky" path="res://sprites/RedCross.png" id="5_nksx1"]
+[ext_resource type="Texture2D" uid="uid://c5wvumd12u0t8" path="res://back_to_map/icone.png" id="6_f864l"]
+[ext_resource type="Texture2D" uid="uid://4ud25glmn024" path="res://back_to_map/icone_hovered.png" id="7_piasy"]
+
+[node name="SceneManager" type="Node2D"]
+script = ExtResource("1_xbcdk")
+
+[node name="Store" parent="." instance=ExtResource("4_xprbr")]
+position = Vector2(0, -2)
+
+[node name="Port" parent="." instance=ExtResource("3_pc74c")]
+position = Vector2(-6, -3)
+
+[node name="MapScene" parent="." instance=ExtResource("3_40ikb")]
+
+[node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
+position = Vector2(1714, 570)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1867.0
+offset_top = 5.0
+offset_right = 2022.0
+offset_bottom = 175.0
+texture = ExtResource("5_nksx1")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 1371.0
+offset_top = 9.0
+offset_right = 1495.0
+offset_bottom = 133.0
+texture_normal = ExtResource("6_f864l")
+texture_pressed = ExtResource("6_f864l")
+texture_hover = ExtResource("7_piasy")
+
+[connection signal="body_entered" from="MapScene/Port/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Port")]]
+[connection signal="body_entered" from="MapScene/PepperPlace/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("PepperPlace")]]
+[connection signal="body_entered" from="MapScene/Store/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Store")]]
+[connection signal="ready" from="Shelves" to="." method="_on_shelves_ready"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+
+[editable path="MapScene"]
+[editable path="MapScene/Port"]
+[editable path="MapScene/PepperPlace"]
+[editable path="MapScene/Store"]
