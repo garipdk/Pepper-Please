@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://djgy1sswxla0l" path="res://sprites/Button_Docks.png" id="4_wtku7"]
 [ext_resource type="Texture2D" uid="uid://b3q62thvrbsv3" path="res://sprites/Button_Town.png" id="4_xgnql"]
 [ext_resource type="PackedScene" uid="uid://c76dqruxme274" path="res://map/Place/map_place.tscn" id="5_6hm8e"]
-[ext_resource type="Texture2D" uid="uid://dk0v0rot5eib8" path="res://sprites/Button_Lab.png" id="5_fexx8"]
+[ext_resource type="Texture2D" uid="uid://hwkxn5nelv1r" path="res://sprites/Button_Lab.png" id="5_fexx8"]
 [ext_resource type="Script" path="res://map/Player/PathFollow2D.gd" id="6_q2ttw"]
 
 [sub_resource type="Curve2D" id="Curve2D_474dy"]

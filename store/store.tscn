@@ -27,8 +27,7 @@ position = Vector2(750, 454)
 texture = ExtResource("3_m2fvj")
 
 [node name="BargainMinigame" parent="." instance=ExtResource("3_ow2md")]
-visible = false
-position = Vector2(558, 381)
+position = Vector2(907, 367)
 scale = Vector2(5, 5)
 
 [node name="Accept" type="Button" parent="." groups=["store_group"]]
