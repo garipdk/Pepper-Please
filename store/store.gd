@@ -3,7 +3,6 @@ extends Node2D
 
 var number_of_unlocked_spices: int = 0
 var rng = RandomNumberGenerator.new()
-var money: int = 50
 signal transation_done(int, String)
 var transaction: Dictionary
 var list_spices: Array[SpiceBowl]
@@ -49,8 +48,8 @@ func new_transaction(list_spices):
 			}
 	
 func do_transaction(transaction: Dictionary):
-	money += transaction.gold_gained
-	PepperGlobal.shelves.get_node("GoldCounter").text = str(money)
+	PepperGlobal.money += transaction.gold_gained
+	PepperGlobal.shelves.get_node("GoldCounter").text = str(PepperGlobal.money)
 	transation_done.emit(transaction.ammount_sold, transaction.spice_name)
 
 func _on_accept_pressed():
