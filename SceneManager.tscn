@@ -26,13 +26,6 @@ position = Vector2(-6, -3)
 [node name="Shelves" parent="." instance=ExtResource("2_wovr8")]
 position = Vector2(1714, 570)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 1867.0
-offset_top = 5.0
-offset_right = 2022.0
-offset_bottom = 175.0
-texture = ExtResource("5_nksx1")
-
 [node name="TextureButton" type="TextureButton" parent="."]
 visible = false
 offset_left = 1371.0
@@ -43,14 +36,21 @@ texture_normal = ExtResource("6_f864l")
 texture_pressed = ExtResource("6_f864l")
 texture_hover = ExtResource("7_piasy")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1867.0
+offset_top = 5.0
+offset_right = 2022.0
+offset_bottom = 175.0
+texture = ExtResource("5_nksx1")
+
 [connection signal="child_order_changed" from="." to="PepperPlace" method="_on_scene_manager_child_order_changed"]
 [connection signal="pressed" from="PepperPlace/Accept" to="." method="_on_accept_pressed"]
 [connection signal="body_entered" from="MapScene/Port/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Port")]]
 [connection signal="body_entered" from="MapScene/PepperPlace/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("PepperPlace")]]
 [connection signal="body_entered" from="MapScene/Store/MapPlaceMouseControl/Area2D" to="." method="_on_area_2d_body_entered" binds= [NodePath("Store")]]
 [connection signal="ready" from="Shelves" to="." method="_on_shelves_ready"]
-[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]
 
 [editable path="PepperPlace"]
 [editable path="MapScene"]

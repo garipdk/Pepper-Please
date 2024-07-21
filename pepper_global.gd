@@ -12,3 +12,5 @@ var dialogs:Dictionary = JSON.parse_string(json_as_text)
 var number_of_unlocked_spices: int = 0
 
 signal unlocked_spice()
+
+signal money_changed()

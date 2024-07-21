@@ -6,7 +6,11 @@ func _ready():
 	await get_tree().process_frame
 	$Shelves.connect_all_transations($Store)
 	$TextureRect.scale = Vector2(0.3, 0.3)
-
+	PepperGlobal.money_changed.connect(_on_money_changed)
+func _on_money_changed():
+	if $Port.spices_price[PepperGlobal.number_of_unlocked_spices] < PepperGlobal.monney and $Store.are_all_bowls_empty():
+		pass #loose !!
+		
 func _input(event:InputEvent):
 	if event.is_action_pressed("ui_cancel"):
 		$TextureButton.visible = false
@@ -20,7 +24,6 @@ func _process(_delta):
 		move_child(get_node(current_destination_map), 3)
 		PepperGlobal.canChangeScene = false
 		$TextureButton.visible = true
-
 
 func _on_shelves_ready():
 	PepperGlobal.shelves = $Shelves
