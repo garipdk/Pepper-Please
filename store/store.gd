@@ -53,6 +53,7 @@ func do_transaction(transaction: Dictionary):
 	transation_done.emit(transaction.ammount_sold, transaction.spice_name)
 
 func _on_accept_pressed():
+	PepperGlobal.money_changed.emit()
 	do_transaction(transaction)
 	transaction = new_transaction(list_spices)
 	

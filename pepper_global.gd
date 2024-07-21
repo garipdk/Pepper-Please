@@ -2,7 +2,7 @@ extends Node
 
 var shelves:Node2D
 
-var money: int = 50
+var money: int = 0
 
 var canChangeScene:bool = false
 

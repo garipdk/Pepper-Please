@@ -35,10 +35,11 @@ func update_text():
 
 func _on_texture_button_pressed():
 	if PepperGlobal.money >= spices_price[PepperGlobal.number_of_unlocked_spices]:
-		PepperGlobal.number_of_unlocked_spices += 1
+		PepperGlobal.money -= spices_price[PepperGlobal.number_of_unlocked_spices]
+		PepperGlobal.money_changed.emit()
 		PepperGlobal.unlocked_spice.emit()
 		already_poor = false
-		if PepperGlobal.number_of_unlocked_spices == 4:
+		if PepperGlobal.number_of_unlocked_spices == 3:
 			$PanelContainer/RichTextLabel.text = ""
 			$PanelContainer/RichTextLabel.text = "Arrrrgl, you got everything I could find on the world!"
 			$TextureButton.visible = false
@@ -46,6 +47,8 @@ func _on_texture_button_pressed():
 			$SpicePile.visible = false
 		else:
 			update_text()
+			PepperGlobal.number_of_unlocked_spices += 1
+			
 	else:
 		if not already_poor:
 			already_poor = true
