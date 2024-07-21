@@ -10,6 +10,7 @@ var multiplier: float = 1
 var bargain_value: int
 var new_value: int
 var ammount: int
+var empty_spices: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,10 +20,10 @@ func _ready():
 	transaction = new_transaction(list_spices)
 	$BargainMinigame/Sprite2D/BargainButton.disabled = true
 	$BargainMinigame.bargain_done.connect(_on_bargain_done)
+	PepperGlobal.unlocked_spice.connect(_on_new_spice)
 
 	
 func new_transaction(list_spices):
-
 	if are_all_bowls_empty():
 		$PanelContainer/Dialog.text = "Ow oh! \n There's no more spices to sell here. Maybe I should explore a bit around?"
 		$Accept.visible = false
@@ -53,6 +54,9 @@ func do_transaction(transaction: Dictionary):
 
 func _on_accept_pressed():
 	do_transaction(transaction)
+	transaction = new_transaction(list_spices)
+	
+func _on_new_spice():
 	transaction = new_transaction(list_spices)
 	
 func are_all_bowls_empty():

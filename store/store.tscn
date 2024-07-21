@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=10 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
 [ext_resource type="Texture2D" uid="uid://c64wb6qvvk63x" path="res://dark_rectange.png" id="2_t3if4"]
 [ext_resource type="Texture2D" uid="uid://bhc4fh0rhcbhq" path="res://sprites/MaketPlace.png" id="3_m2fvj"]
 [ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
 [ext_resource type="Texture2D" uid="uid://nto70t2lb6ui" path="res://sprites/Counter.png" id="5_j3wj6"]
+[ext_resource type="Texture2D" uid="uid://bacg06bjks271" path="res://sprites/Clients.png" id="5_yi7fd"]
 [ext_resource type="PackedScene" uid="uid://dyxelduryjqj8" path="res://back_to_map/back_to_map.tscn" id="6_gg7cf"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
@@ -58,6 +59,11 @@ layout_mode = 2
 size_flags_vertical = 0
 bbcode_enabled = true
 fit_content = true
+
+[node name="Clients" type="Sprite2D" parent="."]
+position = Vector2(326, 569)
+scale = Vector2(2.43328, 2.14185)
+texture = ExtResource("5_yi7fd")
 
 [node name="Counter" type="Sprite2D" parent="."]
 position = Vector2(752, 545)
