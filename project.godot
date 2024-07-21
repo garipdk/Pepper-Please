@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Pepper-please"
+run/main_scene="res://SceneManager.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.ico"
 
 [autoload]
 
@@ -22,6 +23,7 @@ PepperGlobal="*res://pepper_global.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [rendering]
 
