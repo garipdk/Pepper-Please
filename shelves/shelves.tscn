@@ -90,11 +90,12 @@ position = Vector2(-113, -378)
 texture = ExtResource("5_mshjt")
 
 [node name="GoldCounter" type="Label" parent="."]
-offset_left = -125.0
-offset_top = -282.0
-offset_right = -79.0
-offset_bottom = -259.0
+offset_left = -138.0
+offset_top = -295.0
+offset_right = -92.0
+offset_bottom = -246.0
 theme = SubResource("Theme_y2j7k")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "0"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true

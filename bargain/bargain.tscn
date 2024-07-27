@@ -11,7 +11,7 @@ script = ExtResource("1_i3kqv")
 scale = Vector2(0.157714, 0.0961137)
 texture = ExtResource("2_rgey0")
 
-[node name="BargainButton" type="Button" parent="Sprite2D"]
+[node name="BargainButton" type="TextureButton" parent="Sprite2D"]
 modulate = Color(0.05325, 0.06, 0.015, 1)
 offset_left = -197.0
 offset_top = -31.0

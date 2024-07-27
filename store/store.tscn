@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=17 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
 [ext_resource type="Texture2D" uid="uid://c64wb6qvvk63x" path="res://dark_rectange.png" id="2_t3if4"]
 [ext_resource type="Texture2D" uid="uid://bhc4fh0rhcbhq" path="res://sprites/MaketPlace.png" id="3_m2fvj"]
 [ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
 [ext_resource type="Texture2D" uid="uid://frc6pe67knjp" path="res://sprites/Client1.png" id="5_4pi2o"]
+[ext_resource type="Theme" uid="uid://cvnavyere4m0v" path="res://theme.tres" id="5_gub6s"]
 [ext_resource type="Texture2D" uid="uid://nto70t2lb6ui" path="res://sprites/Counter.png" id="5_j3wj6"]
 [ext_resource type="Texture2D" uid="uid://bacg06bjks271" path="res://sprites/Clients.png" id="5_yi7fd"]
 [ext_resource type="Texture2D" uid="uid://bd62jfwwy08d0" path="res://sprites/Client2.png" id="6_gb76w"]
@@ -67,6 +68,7 @@ offset_left = 1166.0
 offset_top = 314.0
 offset_right = 1290.0
 offset_bottom = 345.0
+theme = ExtResource("5_gub6s")
 shortcut = SubResource("Shortcut_dt45t")
 text = "Sold!"
 metadata/_edit_use_anchors_ = true

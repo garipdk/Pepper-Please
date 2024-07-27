@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bowa1t8nssmqe"]
+[gd_scene load_steps=11 format=3 uid="uid://bowa1t8nssmqe"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_0w3gs"]
 [ext_resource type="PackedScene" uid="uid://ftaxkqoanpy0" path="res://map/Player/map_player.tscn" id="1_lo1dr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c76dqruxme274" path="res://map/Place/map_place.tscn" id="5_6hm8e"]
 [ext_resource type="Texture2D" uid="uid://hwkxn5nelv1r" path="res://sprites/Button_Lab.png" id="5_fexx8"]
 [ext_resource type="Script" path="res://map/Player/PathFollow2D.gd" id="6_q2ttw"]
+[ext_resource type="Theme" uid="uid://cvnavyere4m0v" path="res://theme.tres" id="9_p3ia5"]
 
 [sub_resource type="Curve2D" id="Curve2D_474dy"]
 
@@ -63,7 +64,7 @@ offset_bottom = 280.0
 custom_minimum_size = Vector2(1156, 205)
 layout_mode = 2
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("9_p3ia5")
 autowrap_mode = 3
 
 [connection signal="gui_input" from="Port/MapPlaceMouseControl" to="." method="_on_map_place_mouse_control_gui_input" binds= [NodePath("Port")]]
