@@ -31,6 +31,7 @@ func new_transaction(list_spices):
 		$Accept.visible = false
 		$Bargain.visible = false
 		return {}
+	$Clients.frame += 1
 	$Bargain.visible = true
 	$Accept.visible = true
 	multiplier = 1

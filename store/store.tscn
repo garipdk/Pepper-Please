@@ -1,18 +1,49 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnn0xn5odgc7t"]
+[gd_scene load_steps=16 format=3 uid="uid://bnn0xn5odgc7t"]
 
 [ext_resource type="Script" path="res://store/store.gd" id="1_mxsxu"]
 [ext_resource type="Texture2D" uid="uid://c64wb6qvvk63x" path="res://dark_rectange.png" id="2_t3if4"]
 [ext_resource type="Texture2D" uid="uid://bhc4fh0rhcbhq" path="res://sprites/MaketPlace.png" id="3_m2fvj"]
 [ext_resource type="PackedScene" uid="uid://jyu4okouk407" path="res://bargain/bargain.tscn" id="3_ow2md"]
+[ext_resource type="Texture2D" uid="uid://frc6pe67knjp" path="res://sprites/Client1.png" id="5_4pi2o"]
 [ext_resource type="Texture2D" uid="uid://nto70t2lb6ui" path="res://sprites/Counter.png" id="5_j3wj6"]
 [ext_resource type="Texture2D" uid="uid://bacg06bjks271" path="res://sprites/Clients.png" id="5_yi7fd"]
+[ext_resource type="Texture2D" uid="uid://bd62jfwwy08d0" path="res://sprites/Client2.png" id="6_gb76w"]
 [ext_resource type="PackedScene" uid="uid://dyxelduryjqj8" path="res://back_to_map/back_to_map.tscn" id="6_gg7cf"]
+[ext_resource type="Texture2D" uid="uid://cr5x5o0j7lggb" path="res://sprites/Client3.png" id="7_sh3oa"]
+[ext_resource type="Texture2D" uid="uid://d05itxpdxeyd1" path="res://sprites/Client4.png" id="8_fg3ro"]
+[ext_resource type="Texture2D" uid="uid://c7q1s4nkc2afu" path="res://sprites/Client5.png" id="9_alxvr"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
 keycode = 4194309
 
 [sub_resource type="Shortcut" id="Shortcut_dt45t"]
 events = [SubResource("InputEventKey_i54fl")]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_psaqj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4pi2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gb76w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sh3oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fg3ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_alxvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yi7fd")
+}],
+"loop": true,
+"name": &"clients",
+"speed": 5.0
+}]
 
 [node name="Store" type="Node2D" groups=["store_group"]]
 script = ExtResource("1_mxsxu")
@@ -60,10 +91,11 @@ size_flags_vertical = 0
 bbcode_enabled = true
 fit_content = true
 
-[node name="Clients" type="Sprite2D" parent="."]
-position = Vector2(326, 569)
-scale = Vector2(2.43328, 2.14185)
-texture = ExtResource("5_yi7fd")
+[node name="Clients" type="AnimatedSprite2D" parent="."]
+position = Vector2(301, 639)
+scale = Vector2(1.56419, 1.56419)
+sprite_frames = SubResource("SpriteFrames_psaqj")
+animation = &"clients"
 
 [node name="Counter" type="Sprite2D" parent="."]
 position = Vector2(752, 545)
