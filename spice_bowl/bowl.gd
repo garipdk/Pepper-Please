@@ -28,10 +28,9 @@ func connect_transation(store:Store):
 	store.transation_done.connect(_on_transaction)
 
 func _on_transaction(bargain_ammount: int, spice_type: String):
-	print("transaction of" + spice_type)
 	if spice_type == spice_name:
 		ammount -= bargain_ammount
-		print(ammount)
+		PepperGlobal.money_changed.emit()
 		%Line2D.set_point_position(1, Vector2(0, -ammount))
 		if ammount == 0:
 			empty_bowl = true

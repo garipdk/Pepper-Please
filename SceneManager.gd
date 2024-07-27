@@ -9,7 +9,10 @@ func _ready():
 	PepperGlobal.money_changed.connect(_on_money_changed)
 
 func _on_money_changed():
-	if $Port.spices_price[PepperGlobal.number_of_unlocked_spices] < PepperGlobal.money and $Store.are_all_bowls_empty():
+	$Shelves/GoldCounter.text = str(PepperGlobal.money)
+	print("loosing condition:", $Port.spices_price[PepperGlobal.number_of_unlocked_spices], PepperGlobal.money,
+	 $Store.are_all_bowls_empty)
+	if $Port.spices_price[PepperGlobal.number_of_unlocked_spices] > PepperGlobal.money and $Store.are_all_bowls_empty:
 		$ColorRectFilnalScreenLoose.visible = true
 		
 func _input(event:InputEvent):

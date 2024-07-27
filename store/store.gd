@@ -10,7 +10,8 @@ var multiplier: float = 1
 var bargain_value: int
 var new_value: int
 var ammount: int
-var empty_spices: int = 0
+var number_empty_spices: int = 0
+var are_all_bowls_empty: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,7 +25,8 @@ func _ready():
 
 	
 func new_transaction(list_spices):
-	if are_all_bowls_empty():
+	if are_all_bowls_empty:
+		print("empty bowls")
 		$PanelContainer/Dialog.text = "Ow oh! \n There's no more spices to sell here. Maybe I should explore a bit around?"
 		$Accept.visible = false
 		$Bargain.visible = false
@@ -32,7 +34,7 @@ func new_transaction(list_spices):
 	$Bargain.visible = true
 	$Accept.visible = true
 	multiplier = 1
-	var rand_spice_number: int = rng.randi_range(0, PepperGlobal.number_of_unlocked_spices)
+	var rand_spice_number: int = rng.randi_range(number_empty_spices, PepperGlobal.number_of_unlocked_spices)
 	var spice_bowl: SpiceBowl = list_spices[rand_spice_number]
 	ammount = rng.randi_range(1, spice_bowl.ammount)
 	bargain_value = rng.randi_range(spice_bowl.min_value, spice_bowl.max_value)
@@ -49,24 +51,32 @@ func new_transaction(list_spices):
 	
 func do_transaction(transaction: Dictionary):
 	PepperGlobal.money += transaction.gold_gained
+	PepperGlobal.money_changed.emit()
 	PepperGlobal.shelves.get_node("GoldCounter").text = str(PepperGlobal.money)
 	transation_done.emit(transaction.ammount_sold, transaction.spice_name)
+	update_bowls_emptiness()
 
 func _on_accept_pressed():
-	PepperGlobal.money_changed.emit()
 	do_transaction(transaction)
 	transaction = new_transaction(list_spices)
 	
 func _on_new_spice():
+	are_all_bowls_empty = false
 	transaction = new_transaction(list_spices)
 	
-func are_all_bowls_empty():
+func update_bowls_emptiness():
 	var empty_spices: Array[bool]
+	number_empty_spices = 0
 	for i in range(0, PepperGlobal.number_of_unlocked_spices+1):
 		var spice = list_spices[i]
 		empty_spices.append(spice.empty_bowl)
+		if spice.empty_bowl:
+			number_empty_spices += 1
 	if not false in empty_spices:
-		return true
+		are_all_bowls_empty = true
+		PepperGlobal.money_changed.emit()
+	else:
+		are_all_bowls_empty = false
 
 func _on_bargain_pressed():
 	$PanelContainer/Dialog.add_text("You don't think this is a fair price? Let me inspect the spices a bit more...")

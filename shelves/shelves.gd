@@ -23,6 +23,6 @@ func _process(delta):
 	pass
 	
 func on_unlocked_spice():
-	spices_nodes[PepperGlobal.number_of_unlocked_spices+1].visible = true
+	spices_nodes[PepperGlobal.number_of_unlocked_spices].visible = true
 	
 	

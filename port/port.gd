@@ -15,7 +15,7 @@ var spices_names = [
 ]
 
 var spices_price = [
-	500, 1000, 5000, 10000
+	500, 1000, 5000, 10000, 1000000
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -36,8 +36,11 @@ func update_text():
 func _on_texture_button_pressed():
 	if PepperGlobal.money >= spices_price[PepperGlobal.number_of_unlocked_spices]:
 		PepperGlobal.money -= spices_price[PepperGlobal.number_of_unlocked_spices]
-		PepperGlobal.money_changed.emit()
+		PepperGlobal.number_of_unlocked_spices += 1
 		PepperGlobal.unlocked_spice.emit()
+		PepperGlobal.money_changed.emit()
+		
+		print("unlocked spice")
 		already_poor = false
 		if PepperGlobal.number_of_unlocked_spices == 3:
 			$PanelContainer/RichTextLabel.text = ""
@@ -47,7 +50,7 @@ func _on_texture_button_pressed():
 			$SpicePile.visible = false
 		else:
 			update_text()
-			PepperGlobal.number_of_unlocked_spices += 1
+			
 			
 	else:
 		if not already_poor:

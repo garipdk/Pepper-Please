@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw02b82t382pm"]
 
 [ext_resource type="Script" path="res://pepper_place/PepperPlace.gd" id="1_g5yfb"]
-[ext_resource type="Texture2D" uid="uid://7da4gbu528k0" path="res://sprites/Lab.png" id="2_1swkj"]
+[ext_resource type="Texture2D" uid="uid://bn01mdmnp5vaw" path="res://sprites/Lab.png" id="2_1swkj"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i54fl"]
 keycode = 4194309
